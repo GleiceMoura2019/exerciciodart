@@ -1,0 +1,63 @@
+
+
+class Personagem{
+
+  String nome;
+
+  String tipo;
+
+  int _vitalidade;
+
+  
+
+  Personagem(String nome, String tipo, {int vitalidade}){
+
+   this.nome=nome;
+
+   this.tipo=tipo;
+
+   this._vitalidade=vitalidade;
+
+    
+
+    }
+
+  void curar(){
+
+    _vitalidade = _vitalidade + 10 ;
+
+    print("[ALERTA DE CURA] Personagem recebeu cura, vitalidade atual é de $_vitalidade");
+
+}
+
+  void receberDano(){
+
+    _vitalidade + _vitalidade - 10 ;
+
+    print("[ALERTA DE DANO] Personagem recebeu dano, vitalidade atual é de $_vitalidade");
+
+  }
+
+    int get obterVitalidade{
+
+      return _vitalidade;
+
+    }
+
+  }
+
+    
+
+  void main() {
+
+   Personagem personagem1 = Personagem("harry", "guerreiro", vitalidade:90);
+
+    personagem1.receberDano();
+
+   
+
+    personagem1.curar();
+
+    print("A vitalidade atual do personagem ${personagem1.nome} é de ${personagem1.obterVitalidade}");
+
+   }
